@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>DoorIn</title>
+</head>
+<body>
+    <!-- Pagina de Inicio --> 
+    <section class="homeContainer" id="homeContainer">
+        <div class="container" >
+            <div class="card">
+                <img src="./img/logo.png" class="logo">
+                <p class="welcometext">Gestión de visitas fácil de usar</p>
+            <div>
+            <button class="btnOpcion" id="visitor">Visitante</button>
+            <button class="btnOpcion" id="admin">Administrador</button>
+            </div>
+            </div>
+        </div>
+    </section>
+<!-- Pagina Visitante --> 
+
+    <section id="visitorContainer">
+            <header><img class="logo" src="./img/logo.png">
+                
+            </header>
+                   <div id="registerNewone" class="register"></div>
+                   <span><h2>Bienvenido Visitante</h2></span>
+                    <div class="allFields">
+                        <form>
+                          <div class="form-column">
+                          <img src ="https://img.icons8.com/color/420/user-location.png"></img>
+                          <div class="camera">
+                          <video id="video">Video stream not available</video>
+                          <button id="cameraBtn">Take a selfie</button>
+                          </div>
+                          <canvas id="canvas">
+                          </canvas>
+                          <div class="output" hidden>
+                          <img id="photo" alt="The screen capture will appear in this box">
+                          </div>
+                              <div class="form-fields">
+                              <div>
+                              <label for="name">Nombre Completo*</label>
+                              <input required type="text" id="visitorName"/>
+                              <label for="coWorker">A quien visitas*</label>
+                              <select name="select" id="coWorkerName" minlength="10" maxlength="14">
+                              <option></option>    <!--aquí van los nombres de los coworkers para seleccionar-->
+                                </select>
+                                  <label for="time">hora de salida</label>
+                                  <input type="text" id="timeIn"/> 
+                              </div>
+                             
+                              <div>
+                              
+                              <label for="time">Hora de entrada</label>
+                                  <input  type="text" id="timeOut"/>
+                                  <label for="email">Email</label>
+                                  <input type="email" pattern="[^ @]+@[^ @]+.[a-z]+" id="visitorEmail"/>
+                              
+                              </div>
+                              </div>
+                              </div>
+                               
+                          <input id="signUpVisitor" type="submit" class="signUpBtn">
+                        </form>
+                      </div>
+                    </div>
+      </section>
+    </section>
+    <!-- Pagina Administrador--> 
+
+    <section id="adminContainer" class="adminContainer">
+    <header id="cab"><img class="logo" src="./img/logo.png">
+        <button class="panel" id="coWorkers">Empleados Registrados</button>
+        <button class="panel" id="historial">Historico de Visitantes</button>
+        <button class="panel" id="regresar">Volver</button>
+    </header>
+     <!-- Pagina registro de coworkers-->    
+     <section id="registerNewone" class="registerNewone">
+        <div class="register">
+          <span><h2>REGISTRO DE EMPLEADOS</h2></span>
+          <div class="completeForm">
+                   
+                        <form>
+                          <div class="form-column">
+                            
+                              <div class="form-fields">
+                              <div>
+                              <label for="name">Nombre*</label>
+                              <input required type="text" id="name"/>
+                              <label for="lastName">Apellido*</label>
+                              <input required type="text" id="lastName"/>
+                              <label for="celphone">Celular*</label>
+                              <input required type="tel" minlength="10" maxlength="14" id="celPhone"/>
+                              </div>
+                           
+                              <div>
+                              <label for="email">Email</label>
+                              <input type="email" pattern="[^ @]+@[^ @]+.[a-z]+" id="email"/>
+                              <label for="company">Empresa</label>
+                              <input type="text" id="company"/>
+                              </div>
+                              </div>
+                              </div>
+                               
+                              <input id="registerCoworker" type="submit" class="signUpBtn" >
+                        </form>
+                      </div> 
+                    </section>
+    </section>
+
+
+ <!--TABLA DE HITORICO DE VISITANTES-->
+ <div id="historiContainer" class="historiContainer"> 
+        <header id="cab"><img class="logo" src="./img/logo.png">
+            <button class="panel" id="registra">Registro de empleados</button>
+            <button class="regresar" id="Volver">Cerrar sesion</button>
+         </header>
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+      <th scope="col">Nombre del visitante</th>
+      <th scope="col">Nombre del coworker</th>
+      <th scope="col">Fecha y Hora</th>
+     </tr>
+    </thead>
+    <tbody id="summary">
+     <tr>
+     <th scope="col"></th>
+     <td></td>
+     <td></td>
+     </tr>
+     </tbody>
+    </table>
+   </div>      
+
+    <!--TABLA DE COWORKERS REGISTRADOS-->
+    <div id="coWorkerContainer" class="coWorkerContainer"> 
+            <header id="cab"><img class="logo" src="./img/logo.png">
+                <button class="panel" id="registra">Registro de empleados</button>
+                <button class="regresar" id="Volver">Cerrar sesion</button>
+             </header>
+
+        
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Celular</th>
+          <th scope="col">Correo Electrónico</th>
+          <th scope="col">Compañía</th>
+         </tr>
+        </thead>
+        <tbody id="registCoworker">
+         <tr>
+         <th scope="col"></th>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td></td>
+  
+         </tr>
+         </tbody>
+        </table>
+       </div>
+
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+<script src="main.js"></script>
+<script src="photoFunction.js"></script>
+</body>
+</html>
