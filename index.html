@@ -13,7 +13,7 @@
     <section class="homeContainer" id="homeContainer">
         <div class="container" >
             <div class="card">
-                <img src="./img/logo.png" class="logo">
+                <img src="./img/logo.png" class="logo" alt="Imagen no encontrada">
                 <p class="welcometext">Gestión de visitas fácil de usar</p>
             <div>
             <button class="btnOpcion" id="visitor">Visitante</button>
@@ -24,15 +24,15 @@
     </section>
 <!-- Pagina Visitante --> 
     <section id="visitorContainer">
-            <header><img class="logo" src="./img/logo.png">
+            <header><img class="logo" src="./img/logo.png" alt="Imagen no encontrada">
               <button class="panel" id="goBack">Volver</button>    
             </header>
                    <div id="registerNewone" class="register"></div>
-                   <span><h2>Bienvenido Visitante</h2></span>
+                   <span class="welcome">Bienvenido Visitante</span>
                     <div class="allFields">
                         <form>
                           <div class="form-column">
-                          <img src ="https://img.icons8.com/color/420/user-location.png"></img>
+                          <img src ="https://img.icons8.com/color/420/user-location.png" alt="Imagen no encontrada"></img>
                           <div class="camera">
                           <video id="video">Video stream not available</video>
                           <button id="cameraBtn">Take a selfie</button>
@@ -48,7 +48,7 @@
                               <input required type="text" id="visitorName"/>
                               <label for="coWorker">A quien visitas*</label>
                               <select name="select" id="coWorkerName" minlength="10" maxlength="14">
-                              <option></option>    <!--aquí van los nombres de los coworkers para seleccionar-->
+                              <option><!--aquí van los nombres de los coworkers para seleccionar--></option>    
                                 </select>
                                   <label for="time">hora de salida</label>
                                   <input type="text" id="timeIn"/> 
@@ -68,9 +68,9 @@
                           <input id="signUpVisitor" type="submit" class="signUpBtn">
                         </form>
                       </div>
-                    </div>
+                    
       </section>
-    </section>
+  
     <!-- Pagina Administrador--> 
     <section id="adminContainer" class="adminContainer">
     <header id="cab"><img class="logo" src="./img/logo.png">
@@ -81,7 +81,7 @@
      <!-- Pagina registro de coworkers-->    
      <section id="registerNewone" class="registerNewone">
         <div class="register">
-          <span><h2>REGISTRO DE EMPLEADOS</h2></span>
+          <span class="welcome">REGISTRO DE EMPLEADOS</span>
           <div class="completeForm">
                    
                         <form>
@@ -109,8 +109,9 @@
                               <input id="registerCoworker" type="submit" class="signUpBtn" >
                         </form>
                       </div> 
-                    </section>
-    </section>
+                      </div>
+                      
+                  </section>
  <!--TABLA DE HITORICO DE VISITANTES-->
  <section id="historiContainer" class="historiContainer"> 
         <header id="cab"><img class="logo" src="./img/logo.png">
@@ -164,7 +165,6 @@
          </tbody>
         </table>
        </div>
-
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
