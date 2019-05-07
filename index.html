@@ -23,10 +23,9 @@
         </div>
     </section>
 <!-- Pagina Visitante --> 
-
     <section id="visitorContainer">
             <header><img class="logo" src="./img/logo.png">
-                
+              <button class="panel" id="goBack">Volver</button>    
             </header>
                    <div id="registerNewone" class="register"></div>
                    <span><h2>Bienvenido Visitante</h2></span>
@@ -73,12 +72,11 @@
       </section>
     </section>
     <!-- Pagina Administrador--> 
-
     <section id="adminContainer" class="adminContainer">
     <header id="cab"><img class="logo" src="./img/logo.png">
         <button class="panel" id="coWorkers">Empleados Registrados</button>
         <button class="panel" id="historial">Historico de Visitantes</button>
-        <button class="panel" id="regresar">Volver</button>
+        <button class="panel" id="admiToHome">Volver</button>
     </header>
      <!-- Pagina registro de coworkers-->    
      <section id="registerNewone" class="registerNewone">
@@ -113,13 +111,11 @@
                       </div> 
                     </section>
     </section>
-
-
  <!--TABLA DE HITORICO DE VISITANTES-->
- <div id="historiContainer" class="historiContainer"> 
+ <section id="historiContainer" class="historiContainer"> 
         <header id="cab"><img class="logo" src="./img/logo.png">
-            <button class="panel" id="registra">Registro de empleados</button>
-            <button class="regresar" id="Volver">Cerrar sesion</button>
+            <button class="panel" id="historicView">Registro de Empleadores</button>
+            <button class="regresar" id="hisToHome">regresar</button>
          </header>
     <table class="table table-bordered">
       <thead>
@@ -127,6 +123,7 @@
       <th scope="col">Nombre del visitante</th>
       <th scope="col">Nombre del coworker</th>
       <th scope="col">Fecha y Hora</th>
+    <!--  <th scope="col">Foto</th> -->
      </tr>
     </thead>
     <tbody id="summary">
@@ -137,15 +134,13 @@
      </tr>
      </tbody>
     </table>
-   </div>      
-
+  </section>  
     <!--TABLA DE COWORKERS REGISTRADOS-->
     <div id="coWorkerContainer" class="coWorkerContainer"> 
             <header id="cab"><img class="logo" src="./img/logo.png">
                 <button class="panel" id="registra">Registro de empleados</button>
-                <button class="regresar" id="Volver">Cerrar sesion</button>
+                <button class="panel" id="cowToHome">Regresas</button>
              </header>
-
         
         <table class="table table-bordered">
           <thead>
@@ -170,13 +165,14 @@
         </table>
        </div>
 
- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
- <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
- <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
- <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
 <script src="main.js"></script>
 <script src="photoFunction.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 </html>
